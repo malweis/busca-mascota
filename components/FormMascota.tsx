@@ -33,7 +33,7 @@ import {
   FormMessage,
 } from "@/components/ui/form"
 import { Label } from "@radix-ui/react-label"
-import LeafetMap from "./LeafetMap"
+
 
 
 const tipos = [
@@ -137,22 +137,7 @@ export function FormMascota() {
     <Form {...form} >
       <form onSubmit={form.handleSubmit(onSubmit)} className=" grid gap-6 bg-white rounded-lg w-9/12 p-8">
       <DynamicMap/>
-      <FormField
-          control={form.control}
-          name="location"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Título de reporte *:</FormLabel>
-              <FormControl>
-               
-              </FormControl>
-              <FormDescription>
-                Ponle un titulo a tu reporte para que las personas puedan verlo mejor
-              </FormDescription>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+     
       <FormField
           control={form.control}
           name="tipo_reporte"
