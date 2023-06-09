@@ -3,6 +3,10 @@ import {
   Moon,
   SunMedium,
   Twitter,
+  Facebook,
+  Instagram,
+  Mail,
+
   type Icon as LucideIcon,
 } from "lucide-react"
 import LogoImage from 'public/images/img/icona.png'
@@ -15,6 +19,10 @@ export const Icons = {
   sun: SunMedium,
   moon: Moon,
   twitter: Twitter,
+  facebook: Facebook,
+  instagram: Instagram,
+  email: Mail,
+
   logo: (props: LucideProps) => (
     <img src={LogoImage.src} alt="Icono de la mascota" className="h-14 w-14" {...props as React.DetailedHTMLProps<React.ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>}/>
 

@@ -11,25 +11,22 @@ import {
 } from "@/components/ui/card"
 
 
-export function CardPrincipal() {
+export function CardColaborar() {
   return (
     <Card className="w-[400px] ">
       <CardHeader className="space-y-1">
-        <CardTitle className="text-2xl">¿Que es busca Mascota?</CardTitle>
+        <CardTitle className="text-2xl">Colabora con el sitio</CardTitle>
         <CardDescription>
-        Es una plataforma open-source, para que mascotas perdidas puedan reencontrarse con sus dueños.
-        Puedes publicar tu mascota sin costo! Y también será publicado en las redes oficiales de Busca Mascota automáticamente.
+        Si deseas contribuir de manera voluntaria, puedes hacerlo para ayudar a mantener este sitio activo y funcionando constantemente. Tu donación es muy valiosa.
         </CardDescription>
       </CardHeader>
       <CardContent className="grid gap-4">
       
        
-        <div className="grid grid-cols-2 gap-6">
+        <div className="flex justify-center">
+       
           <Button variant="outline">
-            Buscar mi mascota
-          </Button>
-          <Button variant="outline">
-            Publicar mascota
+           Colaborar
           </Button>
         </div>
       </CardContent>
