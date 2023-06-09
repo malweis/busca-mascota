@@ -1,4 +1,6 @@
 export type SiteConfig = typeof siteConfig
+import { Icons } from "@/components/icons"
+
 
 export const siteConfig = {
   name: "Busca Mascota",
@@ -8,6 +10,27 @@ export const siteConfig = {
     {
       title: "Home",
       href: "/",
+      icon: Icons.casa,
+    },
+    {
+      title: "Publicar Mascota",
+      href: "/publicar-mascota",
+      icon: Icons.pata,
+    },
+    {
+      title: "Buscar Mascota",
+      href: "/buscar-mascota",
+      icon: Icons.lupa,
+    },
+    {
+      title: "Colaborar",
+      href: "/colaborar",
+      icon: Icons.manos,
+    },
+    {
+      title: "Adopciones",
+      href: "/adopciones",
+      icon: Icons.donar,
     },
   ],
   links: {
