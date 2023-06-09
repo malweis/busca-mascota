@@ -1,11 +1,11 @@
 "use client"
-
+import dynamic from 'next/dynamic'
 import { zodResolver } from "@hookform/resolvers/zod"
 import { format } from "date-fns"
 import { CalendarPlus, Check, ChevronsUpDown } from "lucide-react"
 import { useForm } from "react-hook-form"
 import * as z from "zod"
-
+  const DynamicMap=  dynamic(() => import('../components/LeafetMap'),{ssr:false})
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { Calendar } from "@/components/ui/calendar"
@@ -33,6 +33,7 @@ import {
   FormMessage,
 } from "@/components/ui/form"
 import { Label } from "@radix-ui/react-label"
+import LeafetMap from "./LeafetMap"
 
 
 const tipos = [
@@ -73,6 +74,9 @@ const accountFormSchema = z.object({
   }),
 
   tipo_reporte: z.string({
+    required_error: "Por favor coloque un tipo al reporte .",
+  }),
+  titulo_reporte: z.string({
     required_error: "Por favor coloque un titulo al reporte .",
   }),
   desc: z.string({
@@ -132,7 +136,23 @@ export function FormMascota() {
   return (
     <Form {...form} >
       <form onSubmit={form.handleSubmit(onSubmit)} className=" grid gap-6 bg-white rounded-lg w-9/12 p-8">
-
+      <DynamicMap/>
+      <FormField
+          control={form.control}
+          name="location"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Título de reporte *:</FormLabel>
+              <FormControl>
+               
+              </FormControl>
+              <FormDescription>
+                Ponle un titulo a tu reporte para que las personas puedan verlo mejor
+              </FormDescription>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
       <FormField
           control={form.control}
           name="tipo_reporte"
@@ -201,7 +221,7 @@ export function FormMascota() {
 
         <FormField
           control={form.control}
-          name="tipo_reporte"
+          name="titulo_reporte"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Título de reporte *:</FormLabel>
