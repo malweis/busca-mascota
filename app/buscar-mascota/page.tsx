@@ -8,6 +8,7 @@ function page() {
     <div className='w-full grid h-screen items-center '>
         <div className='justify-self-center'>
             <ModuleBuscar/></div>
+           
         <div className='w-9/12 h-full'><DynamicMap/></div>
     </div>
   )
