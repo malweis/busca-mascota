@@ -83,7 +83,7 @@ function SiteFooter() {
       </div>
     </div>
     <h4 className="text-lg text-center mb-4 font-medium leading-none">
-      Copyright © Busca Mascota Pictures made by{" "}
+      Copyright © Busca Mascota | Pictures made by{" "}
       <Link
         target="_blank"
         rel="noreferrer"
