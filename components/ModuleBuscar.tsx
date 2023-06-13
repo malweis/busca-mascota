@@ -26,16 +26,16 @@ function ModuleBuscar() {
   
   return (
     <div className='bg-yellow-400 w-full flex flex-col gap-4 rounded-lg p-4 '>
-        <div className='flex gap-8'>
-             <Label htmlFor='tipoReporte'> Tipo de reporte:  <ComboboxDemo  frameworks={tipos}/></Label>
-             <Label htmlFor='Desde'> Fecha Ult. ves visto: <DatePickerDemo/> </Label>
-             <Label htmlFor='Desda'> a <DatePickerDemo/> </Label>
+        <div className='flex items-center gap-8'>
+             <Label htmlFor='tipoReporte'> Tipo de reporte: </Label> <ComboboxDemo  frameworks={tipos}/>
+             <Label htmlFor='Desde'> </Label>  Fecha ult. vez visto: <DatePickerDemo/>
+             <Label htmlFor='Desda'> a  </Label> <DatePickerDemo/>
         </div>
-        <div className='flex  gap-8'>
-        <Label htmlFor='Especie'> Especie: </Label> <ComboboxDemo frameworks={especies}/>
-        <Label htmlFor='Pais'> Pais:    </Label><Input  className='w-4/12' name='pais'/>
-        <Label htmlFor='Ciudad'> </Label>Ciudad:   <Input  className='w-4/12' name='ciudad'/>
-        <Button variant={'outline'}> Buscar</Button>
+        <div className='flex items-center gap-8'>
+        <Label htmlFor='Especie'> Especie: </Label> <ComboboxDemo  frameworks={especies}/>
+        <Label htmlFor='Pais'> Pais:    </Label><Input  className='w-4/12 bg-white' name='pais'/>
+        <Label htmlFor='Ciudad'> </Label>Ciudad:   <Input  className='w-4/12 bg-white' name='ciudad'/>
+        <Button variant={'secondary'}> Buscar</Button>
         </div>
     </div>
   )

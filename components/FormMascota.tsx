@@ -136,7 +136,8 @@ export function FormMascota() {
   return (
     <Form {...form} >
       <form onSubmit={form.handleSubmit(onSubmit)} className=" grid gap-6 bg-white rounded-lg w-9/12 p-8">
-      <DynamicMap/>
+      
+        <div className='mapContainer bg-red-600'><DynamicMap/></div>
      
       <FormField
           control={form.control}

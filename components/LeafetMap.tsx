@@ -25,7 +25,7 @@ function LeafetMap() {
     iconAnchor: [16, 32]
   });
   return (
-    <div className='w-full'>
+
       
 
 
@@ -37,7 +37,7 @@ function LeafetMap() {
     <MapContainer
       center={[50, 30]}
       zoom={13}
-      style={{ height: '400px' }}
+      id='mapid'
     >
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" attribution="Map data &copy; OpenStreetMap contributors" />
       <MapClickHandler />
@@ -50,7 +50,7 @@ function LeafetMap() {
     </MapContainer>
 
 
-    </div>
+   
   )
 }
 
